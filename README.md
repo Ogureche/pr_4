@@ -2,6 +2,10 @@
 Михалько Юрий ЭФБО-02-22
 A new Flutter project.
 
+
+https://github.com/user-attachments/assets/0dca987b-463b-4f23-a8e4-c3281aca1f25
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
