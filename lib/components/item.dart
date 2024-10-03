@@ -37,21 +37,21 @@ class Item extends StatelessWidget {
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Colors.white, // Цвет текста заголовка
+                color: Colors.white, 
               ),
             ),
             const SizedBox(height: 5),
             Text(
               note.description,
               style: const TextStyle(
-                color: Colors.white, // Цвет текста описания
+                color: Colors.white, 
               ),
             ),
             const SizedBox(height: 5),
             Text(
-              '₽${note.price}', // Добавление цены
+              '₽${note.price}', 
               style: TextStyle(
-                color: Colors.green, // Цвет для цены
+                color: Colors.green, 
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
