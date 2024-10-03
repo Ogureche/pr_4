@@ -20,14 +20,14 @@ class _HomePageState extends State<HomePage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => Item(note: note), // Переход на страницу детали заметки
+        builder: (context) => Item(note: note), 
       ),
     );
   }
 
   void _deleteNote(int index) {
     setState(() {
-      notes.removeAt(index); // Удаление заметки по индексу
+      notes.removeAt(index); 
     });
   }
 
@@ -81,22 +81,22 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(height: 10),
                   Text(
                     note.title,
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white), // Заголовок заметки
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white), 
                   ),
                   const SizedBox(height: 5),
                   Text(
                     note.description,
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white), // Описание заметки
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white), 
                   ),
                   const SizedBox(height: 5),
                   Text(
                     '₽${note.price}',
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.green), // Цвет для цены
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.green), 
                   ),
                   IconButton(
                     icon: const Icon(Icons.delete, color: Colors.red),
                     onPressed: () {
-                      // Подтверждение удаления
+                      
                       showDialog(
                         context: context,
                         builder: (context) {
@@ -106,13 +106,13 @@ class _HomePageState extends State<HomePage> {
                             actions: [
                               TextButton(
                                 onPressed: () {
-                                  _deleteNote(index); // Удаляем заметку
-                                  Navigator.of(context).pop(); // Закрываем диалог
+                                  _deleteNote(index); 
+                                  Navigator.of(context).pop(); 
                                 },
                                 child: const Text('Да'),
                               ),
                               TextButton(
-                                onPressed: () => Navigator.of(context).pop(), // Закрываем диалог
+                                onPressed: () => Navigator.of(context).pop(), 
                                 child: const Text('Нет'),
                               ),
                             ],
