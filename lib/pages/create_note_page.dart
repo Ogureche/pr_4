@@ -14,7 +14,7 @@ class _CreateNotePageState extends State<CreateNotePage> {
   final TextEditingController _imageUrlController = TextEditingController();
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _descriptionController = TextEditingController();
-  final TextEditingController _priceController = TextEditingController(); // Новый контроллер для цены
+  final TextEditingController _priceController = TextEditingController(); 
 
   @override
   Widget build(BuildContext context) {
@@ -41,18 +41,18 @@ class _CreateNotePageState extends State<CreateNotePage> {
             ),
             TextField(
               controller: _priceController,
-              decoration: const InputDecoration(labelText: 'Цена'), // Поле для ввода цены
-              keyboardType: TextInputType.number, // Числовая клавиатура для ввода цены
+              decoration: const InputDecoration(labelText: 'Цена'), 
+              keyboardType: TextInputType.number, 
             ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 final newNote = Note(
-                  id: DateTime.now().millisecondsSinceEpoch, // Уникальный ID
-                  imagePath: _imageUrlController.text, // Используем URL изображения
+                  id: DateTime.now().millisecondsSinceEpoch, 
+                  imagePath: _imageUrlController.text, 
                   title: _titleController.text,
                   description: _descriptionController.text,
-                  price: double.tryParse(_priceController.text) ?? 0.0, // Получаем цену, преобразуем в double
+                  price: double.tryParse(_priceController.text) ?? 0.0, 
                 );
                 widget.onCreate(newNote);
                 Navigator.pop(context);
